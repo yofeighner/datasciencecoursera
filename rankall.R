@@ -16,7 +16,7 @@ rankall <- function(outcome, num = "best"){
     h1 <- s_states[!is.na(s_states[col_num]),]
     h2 <- h1[order(h1[col_num],h1[2]),]
     r_num <- if(num == "best"){1} ## determine ranking number if given best, worst, or a number
-    else if(num == "worst"){nrow(df_outcome)} 
+    else if(num == "worst"){nrow(s_states)} 
     else{num}
     h2[r_num,2]})
   
